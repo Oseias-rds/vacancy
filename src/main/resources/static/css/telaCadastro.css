@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+
+body {
+    background: #ffffff;
+    color: 021f2b;
+    font-weight: 500;
+    display: flex;
+    min-height: 100vh;
+    min-width: 100vw;
+}
+
+main form .separar {
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+}
+
+
+
+main {
+    background: rgba(50, 117, 241, 0.658);
+    border-radius: 20px;
+    transform: translate(-5%, 1%);
+    margin: auto;
+    padding: 80px;
+    width: 50vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    animation-name: fade;
+    animation-duration: 1s;
+}
+
+main h1 {
+    color: #021f2b;
+    font-size: 3rem;
+    margin-bottom: 3rem;
+    text-align: left;
+    
+}
+
+
+
+main.redes {
+    display: flex;
+    align-content: center;
+}
+
+main .redes a {
+    text-decoration: none;
+}
+
+main .redes img {
+    width: 55px;
+    margin-left: 3rem;
+}
+
+main .redes a:first-child img {
+    margin-left: 0;
+}
+
+
+main form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+ 
+}
+
+@keyframes fade {
+    from{
+        opacity: 0;
+    }to{
+        opacity: 1;
+    }
+    
+}
+
+main form label {
+    display: flex;
+    flex-direction: column;
+}
+
+main form label span {
+    font-size: 1.2rem;
+    margin-top: 1rem;
+}
+
+main form input {
+    background: #021f2b;
+    width: 250px;
+    height: 50px;
+    padding: 0 0.5rem;
+    margin-top: 1rem;
+    outline: none;
+    color: rgba(166, 166, 166);
+    font-size: 1rem;
+    border: 1px solid #040B18;
+    border-radius: 8px;
+}
+
+main form input[type="submit"] {
+    cursor: pointer;
+    width: 50%;
+    margin-top: 4rem;
+    border: none;
+    border-radius: 32px;
+    background: #4963c3;
+    color: white;
+    font-size: 1.1rem;
+    transition: all .3s ease-in-out;
+}
+
+main form input[type="submit"]:hover {
+    background: #5952d4;
+}

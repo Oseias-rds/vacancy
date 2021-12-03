@@ -1,29 +1,53 @@
 function login() {
 
-	var valoCampoNome = document.getElementById("nome").value;
+	var valorCampoEmail = document.getElementById("email").value;
 
-	var valorCampoCpf = document.getElementById("cpf").value;
+	var valorCampoSenha = document.getElementById("senha").value;
+	
+	const parametros = JSON.stringify({
+		email: valorCampoEmail,
+		senha: valorCampoSenha,
+	
+	});
+	
+	console.log(parametros);
+	
+	fetch("/loginp", { method: "POST", body: parametros,  headers: { "Content-Type": "application/json" } }).then(function(resposta) {
+	
+		if(resposta.ok) {
+			resposta.json().then(function(r) {
+			console.log(r);
+			Toastify({
+				text: "Usuário encontrado!.",
+				duration: 3000
+			}).showToast();
 
-	var valorCampoComida = document.getElementById("comida").value;
-
-	var parametros = { nome: valoCampoNome, cpf: valorCampoCpf, cafe: valorCampoComida };
-
-
-	parametros = JSON.stringify(parametros)
-
-	fetch("/cadastro", { method: "post", body: parametros, headers: { "Content-Type": "application/json" } }).then(function(resposta) {
-		toastr.success("Usuario cadastrado com sucesoooo!");
+		}).catch((err) => {
 		
-
-
-	})
-	fetch("/listar", { method: "get", headers: { "Content-Type": "application/json" } }).then(function(resposta) {
-		resposta.json().then(function(r) {
-			console.log(r)
-
+			Toastify({
+				text: "email ou senha incorretos.",
+				className: "danger",
+				duration: 3000
+			}).showToast();
+		
 		})
+		
+		
+		}else{
+			Toastify({
+				text: "Erro interno no servidor",
+				className: "danger",
+				duration: 3000
+			}).showToast();
+		
+		
+		}
+		
 	})
 }
-document.getElementById("btn").onclick = function() {
+
+
+document.getElementById("btnEntrar").onclick = function(e) {
+	e.preventDefault();
 	login();
 };

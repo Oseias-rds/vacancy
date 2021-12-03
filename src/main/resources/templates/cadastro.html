@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tela de Cadastro</title>
+    <link rel="stylesheet" href="css/telaCadastro.css">
+    
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+
+</head>
+<body>
+   
+    
+    <main>
+
+        
+        
+        <div class="logo">
+            <img src="img/LOGO_NOVA.png" alt="logo" width="157px">
+        </div>
+
+        <form action="">
+
+            <h1>Cadastre-se</h1>   
+
+            <div class="separar">
+        
+                <label for="name">
+                    <span>Nome</span>
+                    <input type="text" id="nome" name="nome" placeholder= "Ex: Ana Santana">
+                </label>
+
+                <label for="cpf">
+                    <span>CPF</span>
+                    <input type="text" id="cpf" name="cpf" placeholder= "Ex: 000.000.000-00">
+                </label>
+
+                <label for="email">
+                    <span>Data de Nascimento</span>
+                    <input type="date" id="dataNascimento" name="dataNascimento" placeholder= "Ex: 03/06/2002">
+                </label>
+
+                <label for="telefone">
+                    <span>Telefone</span>
+                    <input type="tel" id="telefone" name="telefone" placeholder= "Ex: 81 98584-6551">
+                </label>
+
+                <label for="email">
+                    <span>Email</span>
+                    <input type="email" id="email" name="email" placeholder= "Ex: email@gmail.com" >
+                </label>
+
+                <label for="login">
+                    <span>login</span>
+                    <input type="text" id="login" name="login" placeholder= "Ex: Ana_santana">
+                </label>
+
+                <label for="senha">
+                    <span>Senha</span>
+                    <input type="password" id="senha" name="senha" placeholder= "Ex: S3nh4Adm1n">
+                </label>
+
+                <label for="cidade">
+                    <span>Cidade</span>
+                    <input type="text" id="cidade" name="cidade" placeholder= "Ex: Paulista">
+                </label>
+
+                <label for="estado">
+                    <span>Estado</span>
+                    <input type="text" id="estado" name="estado" placeholder= "Ex: Pernambuco">
+                </label>
+
+                <label for="endereco">
+                    <span>Endereço</span>
+                    <input type="text" id="endereco" name="endereco" placeholder= "Ex: Rua abc">
+                </label>
+                
+
+            </div>
+
+            <input type="button" value="Cadastrar" id="btnCadastro">
+
+            <div class="ou">
+                <span>OR</span>
+            </div>
+
+            <div class="redes">
+                <a href="#">
+                    <img src="img/gmail.png" alt="Google">
+                </a>
+                <a href="#">
+                    <img src="img/facebook.png" alt="Facebook">
+                </a>
+            </div>
+         
+        </form>
+        
+    </main>
+    
+    <script src="js/cadastroScript.js"></script>
+
+</body>
+</html>
